@@ -1,16 +1,57 @@
+// zmienne w JS (int double w C++, co znaczy zmienna let, czy są zmienne odpowiadające za napisy jak string czy char i osobno za liczby całkowite i ułamki?), czy są biblioteki do js ktrore trzeba dodać by korzystać z niektorych funkcji np. IOSTREAM czy MATH. CO znaczy prefiks arg? DO czego służy, co zmienia?
+
+function getMoveName(argMoveId) {
+    if (argMoveId == 1) {
+        return 'kamień';
+    } else if (argMoveId == 2) {
+        return 'papier';
+    } else if (argMoveId == 3) {
+        return 'nożyce';
+    }
+
+
+    printMessage('Nie znam ruchu o id ' + argMoveId + '.');
+    return 'nieznany ruch';
+}
+
+
+
+function displayResult(argComputerMove, argPlayerMove) {
+
+    printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove)
+
+
+    if (playerInput > 3) {
+        printMessage('nieznany ruch');
+    } else if (argComputerMove == 'kamień' && argPlayerMove == 'papier') {
+        printMessage('Ty wygrałeś')
+    } else if (argComputerMove == 'kamień' && argPlayerMove == 'nożyce') {
+        printMessage('Ja wygrałem');
+    } else if (argComputerMove == 'kamień' && argPlayerMove == 'kamień') {
+        printMessage('Mamy remis');
+    } else if (argComputerMove == 'papier' && argPlayerMove == 'kamień') {
+        printMessage('Ja wygrałem');
+    } else if (argComputerMove == 'papier' && argPlayerMove == 'nożyce') {
+        printMessage('Ty wygrałeś');
+    } else if (argComputerMove == 'papier' && argPlayerMove == 'papier') {
+        printMessage('Mamy remis');
+    } else if (argComputerMove == 'nożyce' && argPlayerMove == 'papier') {
+        printMessage('Ja wygrałem');
+    } else if (argComputerMove == 'nożyce' && argPlayerMove == 'kamień') {
+        printMessage('Ty wygrałeś')
+    } else if (argComputerMove == 'nożyce' && argPlayerMove == 'nożyce') {
+        printMessage('Mamy remis');
+    }
+}
+
+
+
 let randomNumber = Math.floor(Math.random() * 3 + 1);
 
 console.log('Wylosowana liczba to: ' + randomNumber);
 
-let computerMove = 'nieznany ruch';
+let computerMove = getMoveName(randomNumber);
 
-if (randomNumber == 1) {
-    computerMove = 'kamień';
-} else if (randomNumber == 2) {
-    computerMove = 'papier';
-} else if (randomNumber == 3) {
-    computerMove = 'nożyce';
-}
 
 printMessage('Mój ruch to: ' + computerMove);
 
@@ -18,16 +59,14 @@ let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.
 
 console.log('Gracz wpisał: ' + playerInput);
 
-let playerMove = 'nieznany ruch';
+let playerMove = getMoveName(randomNumber);
 
-if (playerInput == '1') {
-    playerMove = 'kamień';
-} else if {
-    playerMove = 'papier';
-} else if {
-    playerMove = 'nożyce';
-}
+getMoveName();
+getdisplayResult();
 
+console.log(getMoveName('2'));
+
+/*
 printMessage('Twój ruch to: ' + playerMove);
 
 if (playerInput > 3) {
@@ -51,3 +90,5 @@ if (playerInput > 3) {
 } else if (computerMove == 'nożyce' && playerMove == 'nożyce') {
     printMessage('Mamy remis');
 }
+
+*/
