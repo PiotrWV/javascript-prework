@@ -1,5 +1,3 @@
-// zmienne w JS (int double w C++, co znaczy zmienna let, czy są zmienne odpowiadające za napisy jak string czy char i osobno za liczby całkowite i ułamki?), czy są biblioteki do js ktrore trzeba dodać by korzystać z niektorych funkcji np. IOSTREAM czy MATH. CO znaczy prefiks arg? DO czego służy, co zmienia?
-
 function getMoveName(argMoveId) {
     if (argMoveId == 1) {
         return 'kamień';
@@ -18,7 +16,9 @@ function getMoveName(argMoveId) {
 
 function displayResult(argComputerMove, argPlayerMove) {
 
-    printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove)
+    console.log('moves:', argComputerMove, argPlayerMove);
+
+    printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
 
 
     if (playerInput > 3) {
