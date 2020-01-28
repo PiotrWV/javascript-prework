@@ -71,25 +71,26 @@ function playGame(playerInput) {
 
 }
 
-document.getElementById('play-rock').addEventListener('click', function ()) {
+document.getElementById('play-rock').addEventListener('click', function () {
+    playGame('rock')
+}) {
 
     playGame();
 
 }
 
-document.getElementById('play-paper').addEventListener('click', function ()) {
+document.getElementById('play-paper').addEventListener('click', function () {
+    playGame('paper')
+}) {
 
     playGame();
 
 }
 
-document.getElementById('play-scissors').addEventListener('click', function ()) {
+document.getElementById('play-scissors').addEventListener('click', function () {
+    playGame('scissors')
+}) {
 
     playGame();
 
 }
-
-/*
- Wydaje mi się, że jest jakiś błąd w kodzie, przyciski są, jednak nie wyświetlają żadnego komunikatu po naciśnięciu
- 
- */
